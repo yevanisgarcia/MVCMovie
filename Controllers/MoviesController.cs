@@ -55,6 +55,7 @@ namespace MVCMovie.Controllers
 
             var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.ID == id);
+
             if (movie == null)
             {
                 return NotFound();
@@ -162,6 +163,7 @@ namespace MVCMovie.Controllers
             var movie = await _context.Movies.FindAsync(id);
             _context.Movies.Remove(movie);
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
