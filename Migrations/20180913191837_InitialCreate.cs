@@ -15,8 +15,9 @@ namespace MVCMovie.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(nullable: true),
                     ReleaseDate = table.Column<DateTime>(nullable: false),
-                    Genre = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(nullable: false)
+                    Genre = table.Column<string>(nullable: false),
+                    Price = table.Column<decimal>(nullable: false),
+                    Rating = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
